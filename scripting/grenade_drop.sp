@@ -50,7 +50,8 @@ stock bool DropWeapon(int client, char[] entity, int weapon, GrenadeOffset offse
 
 	int quantity = GetEntProp(client, Prop_Send, "m_iAmmo", _, view_as<int>(offset));	
 
-	if(quantity == 1){
+	if(quantity == 1)
+	{
 		CS_DropWeapon(client, weapon, true, true);
 		return true;
 	}
