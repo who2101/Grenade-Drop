@@ -48,8 +48,6 @@ stock bool DropGrenade(int client, char[] entity, int weapon, GrenadeOffset offs
 
 	int grenadeCount = GetEntProp(client, Prop_Send, "m_iAmmo", _, view_as<int>(offset));
 
-	CS_DropWeapon(client, weapon, true, true);
-
 	if(grenadeCount > 1)
 	{
 		int index = GivePlayerItem(client, "weapon_flashbang");
